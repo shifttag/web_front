@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form02.html</title>
+</head>
+<body>
+  <!-- 1. textarea -->
+  <textarea rows="15" cols="50" placeholder="후기를 작성해 주세요">int에서 value 값 넣는거랑 비슷한 내용
+rows는 들어갈수 있는 줄 단위
+cols는 대충 옆으로 들어갈수 있는 단위
+  </textarea>
+  <br />
+  <!-- 2. select -->
+  <!-- multiple 은 ctrl 누르고 다중 선택가능 -->
+  <!-- selected는 초기 설정 -->
+  <select size="2" multiple>
+    <option value="kr">한국어</option>
+    <option value="ch" selected>중국어</option>
+    <option value="jp">일어</option>
+  </select>
+
+  <br />
+  <!-- 3. datalist & option 태그 -->
+  <input type="text" list="fruit" />
+  <datalist id="fruit">
+    <option value="apple" />
+    <option value="banana">선택옵션2</option>
+    <option value="orange">선택옵션3</option>
+  </datalist>
+
+  <br />
+  <!-- 4. button 태그 -->
+  <!-- : input 태그의 각 속성값과 매칭 (잘 사용안하지만 button 태그만 사용함 어떠한 역할을 하는건지는 js에서 가능) -->
+  <button type="submit">제출</button>
+  <button type="reset">초기화</button>
+  <!-- <button type="button"></button> -->
+  <button>버튼</button>
+</body>
+</html>
