@@ -1,0 +1,32 @@
+h1{
+  font-size: 24px;
+  font-weight: bold;
+  color: navy;
+}
+span{
+  background-color: yellow;
+  font-style: italic;
+}
+.custom-list{
+  list-style: inside;
+  list-style-type: square;
+}
+
+.data-table{
+  border-collapse: collapse;
+  
+}
+table, th, td{
+  border: 1px solid black;
+  padding: 8px;
+}
+
+th{
+  background-color: #f2f2f2;
+}
+div{
+  border: 2px dashed red;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+}

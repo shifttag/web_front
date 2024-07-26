@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list.html</title>
+  <style>
+    #li-image{
+      /* url('이미지 경로') 함수 */
+      list-style: url(../../images/dog\ 03.jpg);
+    }
+  </style>
+</head>
+<body>
+  <!--! list-style-type 속성 -->
+  <!--? 1. ul 태그의 목록 아이템 변경 
+  
+    disc(기본값), circle, square
+  -->
+  <ul style="list-style-type: square outside;">
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+  </ul>
+
+  <!--? 2. ol 태그의 목록 순서값 변경 
+  
+    decimal : 10진수, decimal-leading-zero : 앞에 0이 붙는 10진수,
+    lower-roman : 소문자로마숫자 upper-alpha : 대문자 영어
+  -->
+  <ol style="list-style-type: upper-alpha inside;">
+    <li>Item01</li>
+    <li>Item02</li>
+    <li>Item03</li>
+    
+  </ol>
+
+  <!--? 3. 리스트 ul 아이콘, ol 순서값 제거 
+      뒤에 type 생략가능
+  -->
+  <ol style="list-style-type: none">
+    <li>1</li>
+    <li>2</li>
+  </ol>
+
+  <ul id="li-image">
+    <li>불릿 이미지를 사용한 아이템</li>
+  </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--! 수정 필요 깃허브 참고 -->
