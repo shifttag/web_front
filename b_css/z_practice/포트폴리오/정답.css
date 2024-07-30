@@ -1,0 +1,138 @@
+:root {
+  --main-color: #3498db;
+  --accent-color: #f39c12;
+  --light-bg: #ecf0f1; /* 밝은 배경 색상 */
+  --dark-text: #2c3e50;
+  --light-text: #bdc3c7;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  border: 1px solid black;
+}
+
+header, nav, section, footer{
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+header{
+  background-image: linear-gradient(to right, var(--main-color), var(--accent-color));
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+header h1, header p{
+  text-align: center;
+}
+
+nav{
+
+  background-color: #fff;
+  padding: 5px 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  
+}
+
+nav ul li{
+  margin: 0, 10px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: bold;
+  margin: 10px;
+  padding: 5px 10px;
+  border: 2px none black;
+  transition: all 0.3 ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus{
+  background-color: var(--main-color);
+  color: #fff;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+section h2{
+  border-bottom: 3px solid var(--accent-color);
+  padding: 0 0 10px 0;
+}
+
+table, th, td{
+  border: 1px solid var(--light-text);
+  border-collapse: collapse;
+}
+
+th, td{
+  padding: 10px;
+  text-align: center;
+}
+
+th{
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+footer{
+  background-color: var(--dark-text);
+  color: var(--light-text);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8em;
+}
+
+footer a{
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover{
+  color: var(--main-color);
+}
+
+@media (max-width: 768px){
+  nav ul{
+    flex-direction: column;
+  }
+
+  header, nav, section, footer{
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+section{
+  animation: fadeIn 1s ease-in-out;
+}

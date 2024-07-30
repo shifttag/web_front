@@ -1,0 +1,12 @@
+/* a_javascript.css */
+
+button{
+  margin: 20px;
+  padding: 20px;
+  border: 5px dotted #000;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ccc;
+  text-transform: uppercase;
+}
