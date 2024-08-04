@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ff9000;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 1000; /* 헤더가 다른 요소 위에 보이도록 설정 */
+}
+
+.top-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.login {
+  color: #ddd;
+  font-size: 11px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 8px;
+}
+
+.langueage {
+  background-color: #555;
+  color: #fff;
+  width: 80px;
+  height: 37px;
+  text-align: center;
+  line-height: 37px;
+}
+
+.login a {
+  color: #ddd;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.top-bottom {
+  display: flex;
+  justify-content: center;
+  line-height: 88px;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.top-bottom a {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  margin: 0 15px;
+}
+
+#logo {
+  width: 140px;
+  height: auto;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 10px; /* 이미지 위쪽 여백 */
+}
+
+.main-image img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,17 +1,24 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
 #top{
   position: absolute;
   left: 0;
-  top: 0;
+  top: -0px;
   border-top: 1px solid #ff9000;
   float: right;
   width: 100%;
   height: 128px;
 }
 .top-inner{
+  position: relative;
   display: flex;
   justify-content: flex-end;  
   background-color: #000;
   opacity: 0.7;
+  top: -18px;
 
 }
 
@@ -59,14 +66,19 @@ ul li{
   line-height: 38px;
 }
 #logo{
+  position: relative;
   width: 140px;
   height: 38px;
+  top: 10px;
+  left: -50px;
 }
 
 .top-bottom{
   display: flex;
   justify-content: center;
   line-height: 88px;
+  position: relative;
+  top: -27px;
 
 }
 .top-bottom a{
@@ -77,6 +89,97 @@ ul li{
 }
 
 .main-image{
-  height: 450px;
-  width: 1280px;
+  display: flex;
+  position: absolute;
+  top: 128px;
+  border-top: 1px solid #eee;
+  max-width: 100%;
+  height: auto;
+  padding: 0 0px;
+}
+.search{
+  position: relative;
+  top: 579px;
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    background: #009999;
+    text-align: center;
+}
+
+.search label{
+  display: inline-block;
+    width: 95px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 80px;
+}
+
+#search1{
+  height:50px; 
+  line-height:50px; 
+  width:570px; 
+  border-radius: 25px; 
+  color:#111; 
+  border:none; 
+  padding-left:30px;
+  }
+
+.search a{
+    position: absolute;
+    top: 26px;
+    right: 270px;
+    width: 31px;
+    height: 31px;
+    padding: 20px;
+    background: url(https://www.amc.seoul.kr/asan/images/mainNew/ico_search.png) 0 0 no-repeat;
+}
+.mainserv{
+  position: relative;
+  top: 680px;
+  margin: 0 auto;
+  width: 1198px;
+  height: 198px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 10px;
+  
+}
+.mainservice h1{
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  top: 650px;
+  color: #444;
+}
+
+.mainserv ul li a{
+  position: relative;
+  width: 240px;
+  height: 68px;
+  float: left;
+  text-align: center;
+  padding-top: 130px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #444;
+  top: -16px;
+}
+
+.serv01{
+  background: url("https://www.amc.seoul.kr/asan/images/mainNew/ico_serv_doc.png") 0 0 no-repeat;
+}
+.serv02{
+  background: url("https://www.amc.seoul.kr/asan/images/mainNew/ico_serv_dept.png") 0 0 no-repeat;
+}
+.serv03{
+  background: url("https://www.amc.seoul.kr/asan/images/mainNew/ico_serv_resv.png") 0 0 no-repeat;
+}
+.serv04{
+  background: url("https://www.amc.seoul.kr/asan/images/mainNew/ico_serv_first.png") 0 0 no-repeat;
+}
+.serv05{
+  background: url("https://www.amc.seoul.kr/asan/images/mainNew/ico_serv_chart.png") 0 0 no-repeat;
 }
