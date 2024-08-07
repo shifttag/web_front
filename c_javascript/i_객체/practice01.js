@@ -120,8 +120,20 @@ console.log(combineArrays(arr1, arr2)); // 실제 데이터가 담긴 배열 변
 //& 1. 객체 깊은 복사
 // : person 객체를 깊은 복사하는 함수를 작성
 
+// +) 객체의 깊은 복사 JSON 자료형을 사용
+// >> JSON.stringfy(객체데이터)
+// >> JSON.parse(JSON데이터)  // parse: 분석하다
+
+function deepCopy(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+let personCopy = deepCopy(person);
+personCopy.name = '이도경'
+console.log(person);  // { name: '홍동현', age: 50, isStudent: false }
+console.log(personCopy);  // { name: '이도경', age: 50, isStudent: false }
+
 //& 2. 배열과 객체를 활용한 데이터 처리
-// : 아래의 users 배열에서 성인 사용자(18세 이상)만 필터링하고, 필터링된 사용자의 이름을 새 배열로 만들어 반환하는 함수를 작성
+// : 아래의 users 배열에서 성인 사용자(18세 이상)만 필터링(filter)하고, 필터링된 사용자의 이름을 새 배열로 만들어 반환(map)하는 함수를 작성
 // : 메서드 체이닝 사용
 
 const users = [
@@ -129,3 +141,19 @@ const users = [
   { name: "Jane", age: 17 },
   { name: "Doe", age: 18 }
 ];
+
+// 성인 사용자만 필터링 된 데이터 //# filter
+// const users = [
+//   { name: "John", age: 25 },
+//   { name: "Doe", age: 18 }
+// ];
+
+// 성인 사용자의 이름만 새로운 배열로 저장  //# map
+// const users = ['John', 'Doe'];
+
+function adultUserNames(users) {
+  return users
+  .filter(user => user.age >= 18)
+  .map(user => user.name);
+}
+console.log(adultUserNames(users));
