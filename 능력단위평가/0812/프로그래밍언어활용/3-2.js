@@ -1,4 +1,5 @@
-numbers = [3, 2, 5, 1, 4];
+numbers = [];
+numbers.push(1, 2, 100, 4, 6);
 let sum = 0;
 
 function calculateSum(){
