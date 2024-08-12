@@ -11,6 +11,7 @@ let student = {
   lectures: ["자료구조", "알고리즘", "운영체제"]
 };
 
+<<<<<<< HEAD
 const student_json = JSON.stringify(student);
 console.log(student_json);
 
@@ -18,3 +19,11 @@ const student_obj = JSON.parse(student_json);
 console.log(student_obj);
 
 console.log(student.lectures[0]);
+=======
+
+let student_json = JSON.stringify(student);
+console.log(student_json);
+
+let student_obj = JSON.parse(student_json);
+console.log(student_obj);
+>>>>>>> f91932646d7e9c8ed297b5413edbfb5f55b0bcb1
