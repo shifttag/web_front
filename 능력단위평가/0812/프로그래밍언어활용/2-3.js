@@ -1,14 +1,14 @@
 class Car{
   constructor(num, start, end){
-    this.start = start;
-    this.end = end;
     this.num = num;
+    this.start = start;
+    this.end = null;
   }
 }
 
   
 
-class parking{
+class Parking{
   constructor(){
     this.cars = [];
   }
@@ -22,48 +22,40 @@ class parking{
   }
 
   // 차량 출고
-  
-  fee(){
-    timeout = (this.end - this.start) / 60;
-    if(timeout < 10){
-      console.log("공짜입니다.");
-    } else {
-      let fee1 = timeout * 1000;
-      console.log(`주차 요금은 : ${fee1}원 입니다.`);
-    }
-  }
-
-  outCar(num){
+  outCar(num) {
     let end = Date.now();
     const car = this.cars.find(car => car.num === num);
-    if(car){
-      this.cars.end = end;
-      let timeout = this.cars.end - this.cars.start;
-      timeout /= timeout;
-      
+    
+    if (car) {
+      car.end = end;
+      let start = car.start;
+      let timeout = (car.end - start) / (1000 * 60);
 
-      if(timeout < 10){
+      if (timeout < 10) {
         console.log("공짜입니다.");
       } else {
-        let fee1 = timeout * 1000;
-        console.log(`주차 요금은 : ${fee1}원 입니다.`);
+        let fee = timeout * 1000;
+        console.log(`주차 요금은 : ${fee}원 입니다.`);
       }
-    } else{
+
+      // 차량 출고 시 금액 결제 후 삭제
+      this.cars = this.cars.filter(car => car.num !== num);
+    } else {
       console.log('등록된 차량이 없습니다');
     }
-    // 차량 출고 시 금액 결제 후 삭제
-    this.cars = this.cars.filter(car => car.num !== num);
-
   }
-  
+
+  display() {
+    let displayCar = this.cars.map(car => car.num);
+    console.log("현재 주차장에 있는 차량들:" + displayCar);
+  }
 }
 
-
-
-const car1 = new parking();
-car1.inCar('7011');
-car1.outCar('7011');
-car1.outCar('9083')
-console.log(car1);
-car1.inCar('7011');
-console.log(car1);
+const parkingNumber = new Parking();
+parkingNumber.inCar('7011');
+parkingNumber.outCar('7011');
+parkingNumber.outCar('9083'); 
+console.log(parkingNumber);
+parkingNumber.inCar('7011');
+console.log(parkingNumber);
+parkingNumber.display();
