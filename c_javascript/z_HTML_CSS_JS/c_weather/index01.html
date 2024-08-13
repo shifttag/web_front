@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App Project</title>
+  <link rel="stylesheet" href="./style01.css">
+</head>
+<body>
+  
+  <div id="weather-container">
+    <!-- 전체 배경 -->
+    <p id="header"></p> 
+    <!-- 날짜 -->
+    <div id="weather-info"> 
+      <div id="temperature">-3℃</div>
+      <div id="region">Seoul</div>
+      <div id="wether-image">🌤️</div>
+      
+
+    </div>
+    <!-- weather api로 날씨 -->
+    <div id="Rectangle">
+      <!-- weather api로 세부 날씨 + 도시에 따라 바꾸는 부분 -->
+      <input id="search" value="search">
+      <button type="submit" id="glass">🔍</button>
+    </div>
+    <p id="weather-details">Weather Details</p>
+    <div id="temp">
+      <p>Max/Min Temp</p>
+      <p>Humidity</p>
+      <p>Wind</p>
+      <p>Cloudy</p>
+    </div>
+    <div id="temp1">
+      <p>-4</p>
+      <p>29%</p>
+      <p>4.58</p>
+      <p>1%</p>
+    </div>
+    <div id="theme">
+      <div id="ellipse"></div>
+    </div>
+  
+  </div>
+
+  <script src="./main01.js"></script>
+</body>
+</html>

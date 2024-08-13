@@ -32,7 +32,7 @@ class Parking{
       let timeout = (car.end - start) / (1000 * 60);
 
       if (timeout < 10) {
-        console.log("공짜입니다.");
+        console.log(`${num} 차량은 10분 이내 회차입니다.`);
       } else {
         let fee = timeout * 1000;
         console.log(`주차 요금은 : ${fee}원 입니다.`);
@@ -41,7 +41,7 @@ class Parking{
       // 차량 출고 시 금액 결제 후 삭제
       this.cars = this.cars.filter(car => car.num !== num);
     } else {
-      console.log('등록된 차량이 없습니다');
+      console.log(`${num} 번호로 등록된 차량이 없습니다`);
     }
   }
 
@@ -53,9 +53,10 @@ class Parking{
 
 const parkingNumber = new Parking();
 parkingNumber.inCar('7011');
-parkingNumber.outCar('7011');
+parkingNumber.inCar('3011');
+parkingNumber.inCar('2011');
+
+parkingNumber.outCar('7011');1
 parkingNumber.outCar('9083'); 
-console.log(parkingNumber);
 parkingNumber.inCar('7011');
-console.log(parkingNumber);
 parkingNumber.display();
