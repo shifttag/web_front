@@ -12,7 +12,6 @@ date1.textContent = `${days}, ${months} ${dates}, ${years}`
 
 let toggle = false;
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('ellipse');
   const back = document.getElementById('weather-container');
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 // 날씨 정보를 가져오는 비동기 함수
 const city = "Seoul";
-const apikey = "b3d2a174bd0bf979992c01994dd21eea";  // 수정
+const apikey = "dfaeed8dd74544dd8f3235835241308";
 const lang = "kr";
 
 const api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&lang=${lang}&units=metric`;
