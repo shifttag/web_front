@@ -31,6 +31,7 @@ const years = date.getFullYear();
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("ellipse");
   let date1 = document.querySelector("#header");
+  let input = document.getElementById('#search');
   date1.textContent = `${days}, ${months} ${dates}, ${years}`;
 
   let toggle = false;
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Rectangle.style.color = "#fff";
       theme.style.backgroundColor = "#D9D9D9";
       ellipse.style.backgroundColor = "#4B4B4B";
+      document.querySelector('.searchs').setAttribute("id", "search1")
     } else {
       button.style.left = "1367px";
       overlay.style.backgroundColor = "rgba(0, 0, 0, 0)";
@@ -53,11 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
       Rectangle.style.color = "#000";
       theme.style.backgroundColor = "#4F4F4F";
       ellipse.style.backgroundColor = "#F5F5F5";
+      document.querySelector('.searchs').setAttribute("id", "search")
     }
   });
 });
 // 날씨 정보를 가져오는 비동기 함수
-let city = "Seoul";
+let city = "Cuttack";
 // >> input창에서 입력받을 경우 capitalize 사용
 
 // ex) London, Tokyo etc..
@@ -98,12 +101,14 @@ async function getWeatherData() {
     let humidity = data.main.humidity;
     let wind = data.wind.speed;
     let cloudy = data.clouds.all / 100;
-
+    
+    
     temperature.textContent = temp + '℃';
     tem2.textContent = `${mintemp}℃ / ${maxtemp}℃`;
     tem3.textContent = humidity + '%';
     tem4.textContent = wind + 'km/h';
     tem5.textContent = cloudy + '%';
+    region.textContent = city;
     backgroundimg(weather);
   } catch (error) {
     console.error("Error:", error);
@@ -115,19 +120,19 @@ function backgroundimg(weather) {
   const weather_image = document.querySelector("#weather_image");
   switch (weather) {
     case "Sunny":
-      weather_container.backgroundimg = "url(./images/sunny.jpg)";
+      weather_container.style.backgroundImage = "url(./images/sunny.jpg)";
       weather_image.textContent = "🌤️";
       break;
-    case "Cloudy":
-      weather_container.backgroundimg = "url(./images/cloudy.jpg)";
+    case "Clouds":
+      weather_container.style.backgroundImage = "url(./images/cloudy.jpg)";
       weather_image.textContent = "☁️";
       break;
-    case "Rainy":
-      weather_container.backgroundimg = "url(./images/rainy.jpg)";
+    case "Rain":
+      weather_container.style.backgroundImage = "url(./images/rainy.jpg)";
       weather_image.textContent = "🌧️";
       break;
     case "Snow":
-      weather_container.backgroundimg = "url(./images/snow.jpg)";
+      weather_container.style.backgroundImage = "url(./images/snow.jpg)";
       weather_image.textContent = "☀";
       break;
   }

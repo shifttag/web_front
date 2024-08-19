@@ -1,5 +1,5 @@
 #weather_container{
-  background-image: url(./images/sunny.jpg);
+  background-image: url(./images/snow.jpg);
   background-repeat: no-repeat;
   width: 1440px;
   height: 1024px;
@@ -162,17 +162,20 @@ input{
 }
 
 /* 크롬 */
-input::placeholder{ 
+#search::placeholder{ 
   color: #000;
+}
+#search1::placeholder{ 
+  color: #fff;
 }
 
 /* 사파리 */
-input::-webkit-input-placeholder{
+#search::-webkit-input-placeholder{
   color: #000;
 }
 
 /* 엣지 */
-input::-ms-input-placeholder{
+#search::-ms-input-placeholder{
   color: #000;
 }
 
@@ -180,3 +183,4 @@ input::-ms-input-placeholder{
   padding-bottom: 15px;
   
 }
+

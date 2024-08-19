@@ -4,43 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App Project</title>
-  <link rel="stylesheet" href="./style01.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   
-  <div id="weather-container">
+  <div id="weather_container">
+    <div id="overlay"></div>
     <!-- 전체 배경 -->
     <p id="header"></p> 
     <!-- 날짜 -->
-    <div id="weather-info"> 
-      <div id="temperature">-3℃</div>
+    <div id="weather_info"> 
+      <div id="temperature"></div>
       <div id="region">Seoul</div>
-      <div id="wether-image">🌤️</div>
+      <div id="weather_image">🌤️</div>
       
 
     </div>
     <!-- weather api로 날씨 -->
     <div id="Rectangle">
       <!-- weather api로 세부 날씨 + 도시에 따라 바꾸는 부분 -->
-      <input id="search" value="search">
-      <button type="submit" id="glass">🔍</button>
-    </div>
-    <p id="weather-details">Weather Details</p>
+      <input id="search" placeholder="search">
+      <button type="submit" id="glass" onclick="research()">🔍</button>
+    
+    <p id="weather_details">Weather Details</p>
     <div id="temp">
-      <p>Max/Min Temp</p>
-      <p>Humidity</p>
-      <p>Wind</p>
-      <p>Cloudy</p>
+      <p id="tem1">Max/Min Temp</p>
+      <p id="tem1">Humidity</p>
+      <p id="tem1">Wind</p>
+      <p id="tem1">Cloudy</p>
     </div>
     <div id="temp1">
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p id="tem2"></p>
+      <p id="tem3"></p>
+      <p id="tem4"></p>
+      <p id="tem5"></p>
     </div>
     <div id="theme">
       <div id="ellipse"></div>
     </div>
+  </div>
   
   </div>
 
