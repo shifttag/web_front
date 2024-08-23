@@ -1,4 +1,5 @@
 // generic03.ts
+export const tmp = '';
 
 //! 제네릭의 제약 조건
 
