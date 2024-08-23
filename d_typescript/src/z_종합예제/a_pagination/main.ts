@@ -1,3 +1,4 @@
+// export const tmp = '';
 {
   // JSONPlaceholder에서 사용자 데이터를 가져옴
   interface User {
@@ -15,11 +16,11 @@
 
   // 매개변수
   // - page: 현재 출력되는 페이지
-  // - limit: 한 페이지당 출력되는 사용자 데이터의 개수 (3으로 고정)
+  // - limit: 한 페이지 당 출력되는 사용자 데이터의 개수 (3으로 고정)
 
   // 반환 타입: Promise<Users>
   // >> async, await도 Promise를 기반으로 하기 때문에
-  //    : Promise로 반환되는 데이터에 제네릭을 사용하여 원하고자하는 데이터 형식으로 출력
+  //    : Promise로 반환되는 데이터에 제네릭을 사용하여 원하고자하는 데이터 형식으로 반환
   const fetchUsers = async (
     page: number,
     limit: number = 3
@@ -27,40 +28,57 @@
     try {
       // JSONPlaceholder의 옵션
       // : _page옵션 - 대량의 데이터를 호출할 때 특정 페이지의 데이터를 가져옴
-      // : _limit옵션 - 데이터를 조회할 때 한번에 가져올 수 있는 항목의 최대 수를 지정
+      // : _limit옵션 - 데이터를 조회할 때 한 번에 가져올 수 있는 항목의 최대 수를 지정
 
       // >> _page 옵션을 사용하는 경우 기본적으로 각 페이지에 한 개의 데이터가 반환
+
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/users?_page=${page}&_limit=${limit}`
       );
       // page에 1: 1, 2, 3
       // page에 2: 4, 5, 6
-      // page에 3: 7, 8, 9...
+      // page에 3: ...
+
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
+
       const users: Users = await response.json();
+
       return users;
-    } catch (error) {
-      console.error("Fetch error:", error);
+    } catch (e) {
+      console.error("Fetch error:", e);
       return [];
     }
   };
 
   //# 각 데이터가 나열될 카드를 동적으로 생성하는 함수
   // 매개변수: User타입(객체)의 데이터
+
   const createUserCard = (user: User): HTMLElement => {
     const userCard = document.createElement("div");
     // cf) html에 이미 해당 div요소가 있는 경우
-    // >> const userCard = document.querySelector('.user-card')
+    // const userCard = document.querySelectore('.user-card');
 
     userCard.className = "user-card";
     // >> className 속성: HTML의 class 속성과 동일 (.클래스명)
+
+    // const imageElement = document.getElementById('image') as HTMLImageElement;
+    // imageElement!.src = '이미지 경로';
+    // imageElement!.alt = '이미지 대체 이름';
+    // imageElement!.width = 100;
+    // imageElement!.className = '안녕';
+
+    // class AClass {
+
+    // }
+
     userCard.innerHTML = `
       <h2>${user.name}</h2>
       <p><strong>Username:</strong> ${user.username}</p>
       <p><strong>Email:</strong> ${user.email}</p>
     `;
+
     return userCard; // div 태그 내에 h2, p 태그가 존재
   };
 
@@ -69,6 +87,7 @@
 
   const displayUsers = (users: Users): void => {
     const userList = document.getElementById("user-list");
+
     if (userList) {
       userList.innerHTML = "";
       // users배열: 실제 출력될 데이터 배열 (3개의 요소를 포함)
@@ -100,11 +119,12 @@
 
     // 현재 페이지에 해당하는 3개의 데이터를 displayUsers 함수에 전달
     displayUsers(users);
+
     // 페이지 번호도 수정
     updatePageInfo();
   };
 
-  //# addEventListeners 함수
+  //# addEventListeners함수
   // : 이벤트 리스너를 추가하는 함수
   const addEventListeners = (): void => {
     const prevPageButton = document.getElementById("prev-page");
@@ -126,7 +146,7 @@
   };
 
   //# 초기화를 위한 함수
-  // : 프로젝트 초기 실행 시
+  // : 프로젝트 초기 실행 시 동작
   const init = (): void => {
     addEventListeners();
     loadPage(currentPage);
