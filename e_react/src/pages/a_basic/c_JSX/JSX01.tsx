@@ -1,5 +1,4 @@
 import React from "react";
-
 /*
 ! JSX(TSX)
 : JS(TS) 파일 내에서 HTML과 유사한 마크업을 작성할 수 있도록 해주는 JS 구문 확장 문법
@@ -75,6 +74,14 @@ export default function JSX01() {
     padding: '10px'
   }
 
+  class Hello {
+    id: string;
+    
+    constructor(id: string) {
+      this.id = id;
+    }
+  }
+
   return (
     <>
       {/* html 요소 */}
@@ -100,14 +107,15 @@ export default function JSX01() {
       </div>
 
       {/* 
-      요소에 이벤트 전달 시
+      요소에 이벤트 전달 시 
       , 코드를 해석하는 과정에서 실행되지 않도록
       >> 콜백 함수의 형태로 전달 (익명 함수의 형태)
       */}
-
       <button onClick={() => handleClick("클릭")}>클릭해주세요</button>
 
-      <div style={divStyle} id="divElement" className="">DIV 요소</div>
+      <div style={divStyle} id="divElement" className="">
+        DIV 요소
+      </div>
     </>
   );
 }

@@ -36,6 +36,9 @@ export const tmp = "";
   >> Creating a TypeScript app 명령어 사용
     : npx create-react-app my-app --template typescript
     (my-app: 프로젝트명)
+    
+    : sudo npx create-react-app my-app --template typescript
+    >> MacOS 운영체계에서 권한 문제 발생 시 (permissions)
 
     +) 소문자 사용, 연결 단어는 하이픈 사용
 
