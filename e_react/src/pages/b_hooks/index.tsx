@@ -10,6 +10,8 @@ import UseRef01 from "./b_UseRef/UseRef01";
 import UseRef02 from "./b_UseRef/UseRef02";
 import Practice01 from "./a_UseState/Practice01";
 import UseRef03 from "./b_UseRef/UseRef03";
+import UseEffect01 from "./c_UseEffect/UseEffect01";
+import UseEffect02 from "./c_UseEffect/UseEffect02";
 
 // 전체 파일 정렬
 // ctrl + a : 전체 선택
@@ -30,9 +32,14 @@ function Index() {
       <hr />
       <Practice01 />
       <hr />
+      <h2>리액트 Hooks - useRef</h2>
       <UseRef01 />
       <UseRef02 />
       <UseRef03 />
+      <hr />
+      <h2>리액트 Hooks - useEffect</h2>
+      <UseEffect01 />
+      <UseEffect02 />
 
     </div>
   );
