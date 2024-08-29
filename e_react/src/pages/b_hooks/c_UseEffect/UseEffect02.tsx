@@ -22,6 +22,8 @@ export default function UseEffect02() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
   //? 데이터를 불러오는 비동기 함수
   async function fetchPosts() {
     setLoading(true);
@@ -48,8 +50,14 @@ export default function UseEffect02() {
 
   useEffect(() => {
     fetchPosts();
-    console.log('컴포넌트가 마운트 되면 실행');
-  }, [])
+    console.log("컴포넌트가 마운트 되면 실행");
+  }, []);
+
+  const filteredPosts = posts.filter(post => 
+    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+
+
   return (
     <div
       style={{
@@ -63,10 +71,17 @@ export default function UseEffect02() {
 
       {/* <button onClick={fetchPosts}>게시물 불러오기</button> */}
 
+      <input
+        type="text"
+        placeholder="'검색어를 입력하세요."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
       {loading && <div>게시물을 로딩중입니다.</div>}
       {error && <div>Error: {error}</div>}
 
-      {posts.map((post) => (
+      {filteredPosts.map((post) => (
         <li key={post.id}>
           <h4>{post.title}</h4>
           <p>{post.body}</p>
