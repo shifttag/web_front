@@ -13,10 +13,14 @@ import UseRef03 from "./b_UseRef/UseRef03";
 import UseEffect01 from "./c_UseEffect/UseEffect01";
 import UseEffect02 from "./c_UseEffect/UseEffect02";
 import WebCampractice from "./c_UseEffect/Practice01";
-import TodoList from "./z_Todo/TodoAppLocalStorage"
-import UseMemo01 from "./d_Use/UseMemo01";
-import UseMemo02 from "./d_Use/UseMemo02";
-import UseCallback from "./d_Use/UseCallback";
+import UseMemo01 from "./d_Use_Memo_Callback/UseMemo01";
+import UseMemo02 from "./d_Use_Memo_Callback/UseMemo02";
+import UseCallback from "./d_Use_Memo_Callback/UseCallback";
+import TodoList from "./z_todo/TodoAppLocalStorage";
+import UseReducer01 from "./e_UseReducer/UseReducer01";
+import UseReducer02 from "./e_UseReducer/UseReducer02";
+import Custom01 from "./f_CustomHook/Custom01";
+import Custom02 from "./f_CustomHook/Custom02";
 
 // 전체 파일 정렬
 // ctrl + a : 전체 선택
@@ -26,6 +30,10 @@ function Index() {
   return (
     <div>
       <h1 style={{ backgroundColor: "black", color: "white" }}>리액트 Hooks</h1>
+      
+      <h2>리액트 Hooks - 커스텀 훅</h2>
+      <Custom01 />
+      <Custom02 />
 
       <h2>리액트 Hooks - useState</h2>
       <UseState01 />
@@ -52,9 +60,12 @@ function Index() {
       <h2>리액트 Hooks - useMemo / useCallback</h2>
       <UseMemo01 />
       <UseMemo02 />
-      
+
       <UseCallback />
 
+      <h2>리액트 Hooks - useReducer</h2>
+      <UseReducer01 />
+      <UseReducer02 />
     </div>
   );
 }
