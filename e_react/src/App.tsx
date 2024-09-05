@@ -11,16 +11,24 @@ import Parent from './pages/c_Router/Parent';
 import Example01 from './pages/c_Router/Example01';
 import Example02 from './pages/c_Router/Example02';
 import RouterHook from './pages/d_RouterHook';
+import Axios from './pages/e_Axios';
+import GlobalState from './pages/f_GlobalState';
+import Style from './pages/g_Style/Style01';
+import { useCountStore } from './pages/f_GlobalState/Zustand01';
+
+// 전역상태 관리 예제
 
 //! 리액트 프로젝트 개발 실행 명령어
 // npm run start
 // : http://localhost:3000 환경에서 실행
 
 function App() {
+  const { count } = useCountStore();
   return (
     <div>
       <h1>React Project</h1>
       <NaviBar />
+      <p>{ count }</p>
 
       {/* Routes태그: Route를 감싸는 컴포넌트 */}
       <Routes>
@@ -30,6 +38,10 @@ function App() {
         <Route path='/basic' element= {<Basic />} />
         <Route path='/hooks' element= {<Hooks />} />
         <Route path='/todos' element= {<Todos />} />
+        <Route path='/axios' element= {<Axios />} />
+        <Route path='/globalstate' element= {<GlobalState />} />
+        <Route path='/style' element= {<Style />} />
+
         {/* 
           해당 컴포넌트에 대한 메인경로/*
           >> 위 컴포넌트에서 라우트 경로에 따라 페이지 전환이 일어남을 명시

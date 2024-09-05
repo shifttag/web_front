@@ -23,8 +23,8 @@ type UserType = {
   height: number;
 };
 const initialValue: UserType = {
-  username: "이도경",
-  height: 157,
+  username: "홍동현",
+  height: 181,
 };
 
 export default function UseState06() {

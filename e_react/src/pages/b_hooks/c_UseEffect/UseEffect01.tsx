@@ -39,7 +39,7 @@ import React, { useEffect, useState } from "react";
 
 export default function UseEffect01() {
   const [count, setCount] = useState<number>(0);
-  const [name, setName] = useState<string>("이승아");
+  const [name, setName] = useState<string>("홍동현");
 
   //! useEffect 기본 구조
   // : 1 ~ 2 개의 인자가 필요
@@ -92,7 +92,7 @@ export default function UseEffect01() {
       <p>{name}</p>
       <button
         onClick={() => {
-          setName(name === "이승아" ? "이도경" : "이승아");
+          setName(name === "홍동현" ? "홍길동" : "홍동현");
         }}
       >
         이름 변경

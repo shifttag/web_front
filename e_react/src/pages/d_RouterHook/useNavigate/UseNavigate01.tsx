@@ -59,7 +59,7 @@ export default function UseNavigate01() {
 
     // + 로그인되어 있지 않으면 로그인 페이지로 이동
     
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   
   // 인증된 사용자만 홈화면으로 이동 가능
   const handleSignUp = () => {

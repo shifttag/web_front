@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 // : Link와 유사하지만, 현재 활성화된 페이지 경로에 대한 추가적인 스타일 또는 클래스명 적용 가능
 
 export default function NaviBar() {
-  const links = ["/", "basic", "hooks", "routerComponent", 'parent', 'RouterHook'];
+  const links = ["/", "basic", "hooks", "routerComponent", 'parent', 'RouterHook', 'axios', 'globalstate', 'style'];
 
   return (
     <div
