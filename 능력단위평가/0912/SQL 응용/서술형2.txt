@@ -1,0 +1,10 @@
+문제 : INNER JOIN과 OUTER JOIN의 차이점 설명
+
+답안: 
+
+inner join은 두 테이블 간의 교집합에 해당하는 데이터를 얻는다. 즉, A테이블과 B테이블에 모두 존재하는 공통 데이터만 검색된다.
+
+outer join 은 left outer join, right outer join, full outer join 크게 세가지 종류로 나뉘어 진다.
+1. left outer join: 왼쪽테이블 기준으로 join 하는것이다. A테이블의 모든 데이터와 A, B 테이블간의 일치 데이터를 반환한다. B에 해당 데이터가 없는 경우 null로 표시된다.
+2. right outer join: 오른쪽테이블 기준으로 join 하는것이다. B테이블의 모든 데이터와 A, B간의 일치 데이터들이 반환된다. A의 없는 데이터는 null로 표시된다.
+3. full outer join: A와 B테이블 간의 합집합을 얻는다. 만약 A에는 데이터가 있지만 B에 데이터가 없으면 B부분은 null이 되고 반대의 경우에는 A부분이 null이 된다.

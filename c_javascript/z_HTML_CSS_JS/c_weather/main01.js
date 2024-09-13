@@ -69,7 +69,7 @@ if(re === ''){
 // >> input창에서 입력받을 경우 capitalize 사용
 
 // ex) London, Tokyo etc..
-const apikey = "30c3d20b88379d841ed1cb7e8dda9873"; // API사이트에서 제공하는 개인 API_KEY
+const apikey = ""; // API사이트에서 제공하는 개인 API_KEY
 const lang = "kr";
 
 const api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&lang=${lang}&units=metric`;
